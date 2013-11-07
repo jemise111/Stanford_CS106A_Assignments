@@ -9,7 +9,6 @@ import acm.util.*;
 import java.awt.*;
 
 public class DeleteCharacters extends ConsoleProgram {
-
 	public void run() {
 		while (true) {
 			String str = readLine("Enter a string: ");
