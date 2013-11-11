@@ -43,5 +43,11 @@ public interface YahtzeeConstants {
 	public static final int CHANCE = 15;
 	public static final int LOWER_SCORE = 16;
 	public static final int TOTAL = 17;
+	
+/** The constants that specify the value for preset scoring categories in the game */
+	public static final int FULL_HOUSE_VALUE = 25;
+	public static final int SMALL_STRAIGHT_VALUE = 30;
+	public static final int LARGE_STRAIGHT_VALUE = 40;
+	public static final int YAHTZEE_VALUE = 50;
   
 }
