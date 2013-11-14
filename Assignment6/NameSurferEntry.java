@@ -19,7 +19,16 @@ public class NameSurferEntry implements NameSurferConstants {
  * decade.
  */
 	public NameSurferEntry(String line) {
-		// You fill this in //
+		/*parses line into name and string containing just the numeric data. name and nameCountString
+		 * are instance variables to be called on in the toString() method.
+		 */
+		name = line.substring(0, line.indexOf(" "));
+		nameCountString = line.substring(line.indexOf(" ") + 1);
+		StringTokenizer tokenizer = new StringTokenizer(nameCountString); //tokenizes count for each decade
+		occurrenceCount = new int[11]; //creates new array for the decade count
+		for (int i = 0; i < occurrenceCount.length; i++) {
+			occurrenceCount[i] = Integer.parseInt(tokenizer.nextToken());
+		}
 	}
 
 /* Method: getName() */
@@ -27,8 +36,7 @@ public class NameSurferEntry implements NameSurferConstants {
  * Returns the name associated with this entry.
  */
 	public String getName() {
-		// You need to turn this stub into a real implementation //
-		return null;
+		return name;
 	}
 
 /* Method: getRank(decade) */
@@ -41,7 +49,7 @@ public class NameSurferEntry implements NameSurferConstants {
  */
 	public int getRank(int decade) {
 		// You need to turn this stub into a real implementation //
-		return 0;
+		return occurrenceCount[decade];
 	}
 
 /* Method: toString() */
@@ -50,8 +58,11 @@ public class NameSurferEntry implements NameSurferConstants {
  * NameSurferEntry.
  */
 	public String toString() {
-		// You need to turn this stub into a real implementation //
-		return "";
+		return name + " [" + nameCountString + "]";
 	}
+	
+	private String name;
+	private String nameCountString;
+	private int[] occurrenceCount;
 }
 

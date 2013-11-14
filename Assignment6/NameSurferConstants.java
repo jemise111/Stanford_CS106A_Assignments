@@ -29,4 +29,7 @@ public interface NameSurferConstants {
 /** The number of pixels to reserve at the top and bottom */
 	public static final int GRAPH_MARGIN_SIZE = 20;
 
+/** The height of the JDialog bar in pixels */
+	public static final int BAR_HEIGHT = 62;
+
 }
