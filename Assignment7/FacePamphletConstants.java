@@ -13,6 +13,9 @@ public interface FacePamphletConstants {
 
 	/** The height of the application window */
 	public static final int APPLICATION_HEIGHT = 500;
+	
+	/**The height of the NORTH bar */
+	public static final int NORTH_HEIGHT = 18;
 
 	/** Number of characters for each of the text input fields */
 	public static final int TEXT_FIELD_SIZE = 15;
